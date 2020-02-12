@@ -49,7 +49,7 @@
 
  /* EXTRA CREDIT : 
 
- 1. We get am warmomg for an incompatible pointer types initializing int* with an expression of type char
+ 1. We get am warning for an incompatible pointer types initializing int* with an expression of type char
 
 
 
