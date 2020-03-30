@@ -72,7 +72,7 @@ void print_size();
  log_info("My name: %s, age: %d", MY_NAME, get_age());
 
  set_age(100);
-
+//
  log_info("My age is now: %d", get_age());
 
  // test out THE_SIZE extern
