@@ -1,0 +1,27 @@
+//  Write a C program to find LCM (least common multiplier) of two numbers.
+
+
+
+#include <stdio.h>
+int main() {
+    int FirstNumber;
+    int SecondNumber;
+    int i;
+    int gcd;
+    int lcm;
+
+    printf("Enter two  integers: ");
+    scanf("%d %d", &FirstNumber, &SecondNumber); 
+
+    for (i = 1; i <= FirstNumber && i <= SecondNumber; ++i) {
+        
+        // check if i is a factor of both integers
+        if (FirstNumber % i == 0 && SecondNumber % i == 0)
+            gcd = i;
+    }
+
+    lcm = (FirstNumber * SecondNumber) / gcd;
+
+    printf("The LCM of the numbers  %d and %d is %d.", FirstNumber, SecondNumber,lcm);
+    return 0;
+}
