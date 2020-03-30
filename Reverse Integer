@@ -1,0 +1,53 @@
+/* Write a C program that reverse a given integer. We can reverse a number using loop and
+arithmetic operators in both iterative and recursive approaches.*/
+
+#include <stdio.h>
+#include <math.h>
+
+
+/* Fuction declaration */
+int reverse(int num);
+
+
+int main()
+{
+    int num, rev, numIsNegative;
+
+    /* Input number from user */    
+    printf("Enter any number: ");
+    scanf("%d", &num);
+    
+	/* Assign 1 if(num < 0) otherwise 0 */
+	numIsNegative = (num < 0);
+	
+	/* If num is negative, then convert it to positive */
+	if(numIsNegative)
+		num *= -1;
+	
+    /* Call the function to reverse number */	
+    rev = reverse(num); 
+	
+	/* If num was negative, then convert the reverse to negative */
+	if(numIsNegative)
+		rev *= -1;
+    
+    printf("Reverse of %d = %d", num, rev);
+    
+    return 0;
+}
+
+
+/**
+ * Recursive function to find reverse of any number
+ */
+int reverse(int num)
+{
+    // Find total number of digits in num
+    int digit = (int) log10(num);
+    
+    // Base condition
+    if(num == 0)
+        return 0;
+    
+    return ((num%10 * pow(10, digit)) + reverse(num/10));
+}
