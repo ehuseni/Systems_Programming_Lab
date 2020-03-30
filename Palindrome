@@ -1,3 +1,8 @@
+// Write a C program that checks whether the given integer is a palindrome or not. A
+// palindrome is when the original number and the reverse of the original input are the
+//same
+
+
 #include <stdio.h>
 int main() {
     int n;
