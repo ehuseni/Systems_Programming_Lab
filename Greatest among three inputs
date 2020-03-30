@@ -1,0 +1,21 @@
+//Write a C program that takes three integers as input and finds the greatest one among the
+//three integers as output.
+
+
+#include<stdio.h>
+int main()
+{
+   int FirstNumber,SecondNumber,ThirdNumber;
+   
+   printf("\nEnter three numbers: ");
+  
+   scanf("%d %d %d",&FirstNumber,&SecondNumber,&ThirdNumber);
+
+   if((FirstNumber>SecondNumber)&&(FirstNumber>ThirdNumber))
+      printf("\n  %d is the greatest", FirstNumber);
+   else if((SecondNumber>ThirdNumber)&&(SecondNumber>FirstNumber))
+      printf("\n %d is the greatest", SecondNumber);
+   else
+      printf("\n  %d is the greatest", ThirdNumber);
+   return 0;
+}
